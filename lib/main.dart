@@ -58,7 +58,7 @@ class _LifeCounterPageState extends State<LifeCounterPage> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
-          '俺の人生カウンター',
+          '人生カウンター',
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
       ),
