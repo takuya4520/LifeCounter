@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.grey,
       ),
-      home: LifeCounterPage(),
+      home: const LifeCounterPage(),
     );
   }
 }
@@ -58,7 +58,7 @@ class _LifeCounterPageState extends State<LifeCounterPage> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
-          '人生カウンター',
+          '俺の人生カウンター',
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
       ),
@@ -73,7 +73,7 @@ class _LifeCounterPageState extends State<LifeCounterPage> {
                 Expanded(
                   child: Text(
                     lifeEvent.title,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
@@ -84,7 +84,7 @@ class _LifeCounterPageState extends State<LifeCounterPage> {
                   style: const TextStyle(
                       fontSize: 20, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 Container(
@@ -101,7 +101,7 @@ class _LifeCounterPageState extends State<LifeCounterPage> {
                     icon: const Icon(Icons.add),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Container(
@@ -138,7 +138,7 @@ class _LifeCounterPageState extends State<LifeCounterPage> {
         backgroundColor: Colors.grey,
         children: [
           SpeedDialChild(
-            child: Icon(Icons.add),
+            child: const Icon(Icons.add),
             label: '追加',
             backgroundColor: Colors.grey,
             onTap: () async {
@@ -157,7 +157,7 @@ class _LifeCounterPageState extends State<LifeCounterPage> {
           ),
           if (deleteMode == false)
             SpeedDialChild(
-              child: Icon(Icons.delete_outline),
+              child: const Icon(Icons.delete_outline),
               label: '削除モード',
               backgroundColor: Colors.grey,
               onTap: () {
@@ -167,7 +167,7 @@ class _LifeCounterPageState extends State<LifeCounterPage> {
             )
           else if (deleteMode == true)
             SpeedDialChild(
-              child: Icon(Icons.delete_outline),
+              child: const Icon(Icons.delete_outline),
               label: '削除モード終了',
               backgroundColor: Colors.grey,
               onTap: () {
@@ -176,7 +176,7 @@ class _LifeCounterPageState extends State<LifeCounterPage> {
               },
             ),
           SpeedDialChild(
-            child: Icon(Icons.delete),
+            child: const Icon(Icons.delete),
             label: '全削除',
             backgroundColor: Colors.grey,
             onTap: () {
@@ -206,8 +206,8 @@ class _AddLifeEventPageState extends State<AddLifeEventPage> {
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
       ),
       body: TextFormField(
-        decoration: InputDecoration(
-          hintText: 'ここに入力してね',
+        decoration: const InputDecoration(
+          hintText: 'ここに入力してね！',
         ),
         onFieldSubmitted: (text) {
           final lifeEvent = LifeEvent(
